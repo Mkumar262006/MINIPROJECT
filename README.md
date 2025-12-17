@@ -1,59 +1,96 @@
+# Implementation of a Secure Presentation Attack Detection (PAD) System with Post-Quantum Cryptography (PQC) Integration
+
 ## Title of the Project
-Small description about the project like one below
-The integration of a chatbot within a hostel booking system, aimed at streamlining the reservation process for students and improving the overall user experience.
+Implementation of a Secure Presentation Attack Detection (PAD) System with Post-Quantum Cryptography (PQC) Integration
+
+## Small Description
+This project integrates a machine learning–based Presentation Attack Detection (PAD) system with modern cryptography, including simulated Post-Quantum Cryptography (PQC), to secure biometric data during the liveness detection inference process and safeguard against future quantum threats.
+
+
 
 ## About
-<!--Detailed Description about the project-->
-Tailored Chatbot for Hostel Booking System is a project designed to integrate a chatbot that leverages advanced natural language processing techniques to understand and respond to user queries to the hostel booking system. Traditional hostel booking processes are often time-consuming and involve manual searches and extensive communication with hostel staff. This project seeks to overcome these challenges by creating an easy-to-use chatbot interface that assists students in addressing inquiries.
+The **Secure PAD + PQC System** creates a robust and secure pipeline for face liveness detection using a lightweight CNN model.  
+AES-GCM is used for encrypting input images, and a simulated Kyber PQC key exchange secures the symmetric AES key.
+
+This ensures end-to-end protection of biometric data during encrypted inference.
+
+
 
 ## Features
-<!--List the features of the project as shown below-->
-- Implements advance neural network method.
-- A framework based application for deployment purpose.
-- High scalability.
-- Less time complexity.
-- A specific scope of Chatbot response model, using json data format.
+- **Custom PAD Dataset Simulation**  
+  Converts CIFAR-10 into a binary Real/Spoof dataset with a 50% spoof ratio.
+
+- **Lightweight CNN (SimplePADCNN)**  
+  Efficient structure for real-time PAD inference.
+
+- **PQC-Ready Cryptographic Pipeline**  
+  Integrates **AES-256 GCM** for encryption/decryption.
+
+- **Simulated Kyber Key Exchange**  
+  Demonstrates PQC-style key exchange protecting the AES key.
+
+- **High Secure Accuracy**  
+  Achieves **97.64% accuracy** after secure encrypted pipeline.
+
+- **Low Latency**  
+  Maintains **1.80 ms** per image during encrypted inference.
+
+
 
 ## Requirements
-<!--List the requirements of the project as shown below-->
-* Operating System: Requires a 64-bit OS (Windows 10 or Ubuntu) for compatibility with deep learning frameworks.
-* Development Environment: Python 3.6 or later is necessary for coding the sign language detection system.
-* Deep Learning Frameworks: TensorFlow for model training, MediaPipe for hand gesture recognition.
-* Image Processing Libraries: OpenCV is essential for efficient image processing and real-time hand gesture recognition.
-* Version Control: Implementation of Git for collaborative development and effective code management.
-* IDE: Use of VSCode as the Integrated Development Environment for coding, debugging, and version control integration.
-* Additional Dependencies: Includes scikit-learn, TensorFlow (versions 2.4.1), TensorFlow GPU, OpenCV, and Mediapipe for deep learning tasks.
+- **OS:** Linux / Windows / macOS / Google Colab  
+- **Python:** >= 3.x  
+- **Deep Learning:** PyTorch  
+- **Crypto Library:** PyCryptodome  
+- **Dataset Handling:** torchvision, torch.utils.data  
+- **Evaluation:** sklearn  
+- **Plotting:** matplotlib  
+- **Hardware:** CPU or CUDA-supported GPU
+
+
 
 ## System Architecture
-<!--Embed the system architecture diagram as shown below-->
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/d02e67f1-3cdb-49dc-9067-65d1da757095" />
 
-![Screenshot 2023-11-25 133637](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/a60c11f3-0a11-47fb-ac89-755d5f45c995)
+
+### Secure Flow
+1. AES key is secured with simulated Kyber key exchange.  
+2. Image is encrypted using AES-GCM.  
+3. Decrypted image is fed to CNN for PAD inference.
+
 
 
 ## Output
 
-<!--Embed the Output picture at respective places as shown below as shown below-->
-#### Output1 - Name of the output
+### Output 1 – Secure Pipeline Metrics
 
-![Screenshot 2023-11-25 134037](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/8c2b6b5c-5ed2-4ec4-b18e-5b6625402c16)
-
-#### Output2 - Name of the output
-![Screenshot 2023-11-25 134253](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/5e05c981-05ca-4aaa-aea2-d918dcf25cb7)
-
-Detection Accuracy: 96.7%
-Note: These metrics can be customized based on your actual performance evaluations.
-
-
-## Results and Impact
-<!--Give the results and impact as shown below-->
-The Sign Language Detection System enhances accessibility for individuals with hearing and speech impairments, providing a valuable tool for inclusive communication. The project's integration of computer vision and deep learning showcases its potential for intuitive and interactive human-computer interaction.
-
-This project serves as a foundation for future developments in assistive technologies and contributes to creating a more inclusive and accessible digital environment.
-
-## Articles published / References
-1. N. S. Gupta, S. K. Rout, S. Barik, R. R. Kalangi, and B. Swampa, “Enhancing Heart Disease Prediction Accuracy Through Hybrid Machine Learning Methods ”, EAI Endorsed Trans IoT, vol. 10, Mar. 2024.
-2. A. A. BIN ZAINUDDIN, “Enhancing IoT Security: A Synergy of Machine Learning, Artificial Intelligence, and Blockchain”, Data Science Insights, vol. 2, no. 1, Feb. 2024.
+| Metric | Result |
+|--------|--------|
+| Accuracy | **97.64%** |
+| Precision | **95.48%** |
+| Recall | **99.98%** |
+| F1 Score | **97.68%** |
+| Average Latency | **1.80 ms** |
 
 
 
+## Expected Results and Impact
+
+- **Enhanced Data Privacy**  
+  AES-GCM ensures secure encryption of biometric images, preventing data interception.
+
+- **Future-Proof Security**  
+  Simulated Kyber integration demonstrates quantum-resistant cryptographic capability.
+
+- **Real-Time Performance**  
+  Achieves secure inference with **minimal latency (1.80 ms)** suitable for edge deployment.
+
+
+
+## References
+1. N. S. Gupta et al., “Enhancing Heart Disease Prediction Accuracy Through Hybrid ML Methods”, EAI Endorsed Trans IoT, 2024.  
+2. A. A. Bin Zainuddin, “Enhancing IoT Security…”, Data Science Insights, 2024.  
+3. PyTorch Documentation  
+4. PyCryptodome Documentation  
+5. Kyber PQC Standard Documentation  
 
